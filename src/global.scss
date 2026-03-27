@@ -35,3 +35,92 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+
+/* src/global.scss */
+
+ion-content {
+    --background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), 
+                url('/assets/images/landing-bg.png') no-repeat center center / cover;
+}
+
+/* src/global.scss */
+
+ion-header {
+  // Removes the thin default border/shadow
+  &.ion-no-border {
+    --border-width: 0;
+  }
+
+  ion-toolbar {
+    // 1. The Nature Background + Dark Green Overlay
+    --background: linear-gradient(rgba(26, 48, 21, 0.75), rgba(26, 48, 21, 0.85)), 
+                  url('/assets/images/grass-header.jpg') no-repeat center center / cover;
+    
+    // 2. Text styling
+    --color: #ffffff;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+
+    ion-title {
+      font-family: 'Serif', 'Playfair Display', serif; // Matches your branding
+      font-weight: 700;
+      font-size: 1.4rem;
+      text-align: center;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  // 3. The Light Green/Yellow Divider Line (Bottom border effect)
+  &::after {
+    content: '';
+    display: block;
+    height: 4px;
+    background: #d4e09b; // That mossy yellow-green line
+    border-bottom: 1px solid #1a3015;
+    width: 100%;
+  }
+}
+
+// Ensure the back button is always white to contrast the green
+ion-back-button {
+  --color: #ffffff;
+}
+
+/* app.component.scss or global.scss */
+
+ion-menu {
+  // 1. Make the actual menu container transparent
+  --background: transparent;
+
+  ion-content {
+    // 2. Target the internal background part of ion-content
+    &::part(background) {
+      background: rgba(0, 0, 0, 0.85); // Very dark green/black with 85% opacity
+      
+      // 3. The "Glass" effect (works on modern browsers/phones)
+      backdrop-filter: blur(10px); 
+      -webkit-backdrop-filter: blur(10px);
+    }
+  }
+
+  // 4. Style the items to ensure they stay visible
+  ion-item {
+    --background: transparent; // Items shouldn't have their own solid backgrounds
+    --color: #d4e09b; // Light mossy green text
+    --inner-padding-end: 20px;
+    
+    ion-icon {
+      color: #7a9460; // Slightly darker green for icons
+    }
+
+    // Add that chevron arrow at the end like in your screenshot
+    &::after {
+      content: '›'; 
+      position: absolute;
+      right: 20px;
+      font-size: 24px;
+      color: rgba(255, 255, 255, 0.2);
+    }
+  }
+}

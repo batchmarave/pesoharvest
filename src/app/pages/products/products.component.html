@@ -1,0 +1,17 @@
+<ion-content class="parchment-background">
+  <ion-grid class="ion-padding">
+    <ion-row>
+      <ion-col size="6" *ngFor="let product of products">
+        <div class="product-card">
+          <div class="image-container">
+            <img [src]="product.image" />
+            <div class="product-title-bar">
+              {{ product.name }}
+            </div>
+          </div>
+          <button class="buy-now-btn">Buy Now</button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

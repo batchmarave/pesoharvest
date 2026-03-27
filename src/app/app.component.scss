@@ -1,0 +1,19 @@
+ion-menu {
+    --background: #fff;
+  ion-item {
+    --background: transparent;
+    --color: #2e4d25;
+    margin: 8px;
+    --border-radius: 8px;
+    font-weight: 600;
+
+    &.selected {
+      --background: rgba(46, 77, 37, 0.1) tra;
+      --color: #2e4d25;
+    }
+    
+    ion-icon {
+      color: #2e4d25;
+    }
+  }
+}

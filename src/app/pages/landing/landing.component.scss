@@ -1,0 +1,55 @@
+ion-content {
+     .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; // Pushes header up and buttons down
+        padding: 40px 20px 80px 20px;
+        text-align: center;
+
+        .brand-section {
+        margin-top: 20px;
+        h1 {
+            font-family: 'Serif', 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #1a3015; // Dark green from the logo
+            margin: 0;
+            font-weight: 800;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+        }
+        p {
+            font-style: italic;
+            color: #2e4d25;
+            font-size: 1.2rem;
+            margin-top: -5px;
+        }
+        }
+
+        .button-group {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        ion-button {
+            height: 60px;
+            --border-radius: 12px;
+            --box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .btn-start {
+            --background: linear-gradient(to bottom, #f3b012, #d35400);
+            --border-color: #ffffff;
+            --border-style: solid;
+            --border-width: 1px;
+        }
+
+        .btn-explore {
+            --background: #1a3015;
+            --background-activated: #2e4d25;
+        }
+        }
+    }
+}

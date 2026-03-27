@@ -1,1 +1,54 @@
 
+
+.harvest-tab-bar {
+  --background: #1a3015; // Fallback
+  background: linear-gradient(to bottom, #2a4d25 0%, #13240f 100%);
+  border-top: 2px solid #3d5a35;
+  height: 70px;
+  
+  // Add that grainy texture look
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+    opacity: 0.2;
+    pointer-events: none;
+  }
+}
+
+ion-tab-button {
+  --color: #ffffff;
+  --color-selected: #ffffff;
+  --ripple-color: #3d5a35;
+  
+  // The vertical dividers between buttons
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+
+  &:last-child {
+    border-right: none;
+  }
+
+  ion-label {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-top: 4px;
+  }
+
+  ion-icon {
+    font-size: 24px;
+    // This creates that "stamped" or "embossed" look from your image
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.5));
+  }
+
+  // Active state
+  &.tab-selected {
+    background: rgba(255, 255, 255, 0.05);
+    ion-icon {
+      transform: scale(1.1);
+      color: #f1c40f; // Subtle gold highlight for active tab
+    }
+  }
+}

@@ -1,0 +1,69 @@
+/* Card Styling */
+.member-card {
+  background: #fdf5e6; // Parchment base
+  border: 1px solid #d4c5a1;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+
+  .member-title {
+    font-family: 'Serif', serif;
+    font-weight: 800;
+    color: #1a3015; // Dark green
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+}
+
+/* Custom Dividers */
+.card-divider {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #d4c5a1, transparent);
+  margin: 10px 0;
+}
+
+/* Benefit List with Custom Bullets */
+.benefit-list {
+  list-style: none;
+  padding: 0;
+  display: inline-block;
+  text-align: left;
+
+  li {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 25px;
+
+    /* The Golden Sphere Bullets */
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 4px;
+      width: 12px;
+      height: 12px;
+      background: radial-gradient(circle at 30% 30%, #ffd700, #b8860b);
+      border-radius: 50%;
+      box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+  }
+}
+
+/* The Glossy Orange "Join Now" Button */
+.join-btn {
+  --background: linear-gradient(to bottom, #f39c12 0%, #d35400 100%);
+  --background-activated: #a04000;
+  --border-radius: 8px;
+  --color: white;
+  font-weight: bold;
+  height: 45px;
+  margin: 10px auto;
+  width: 60%; // Matching the centered narrow look
+  font-size: 1.1rem;
+  box-shadow: 0 4px 0 #8e44ad; // Optional bottom depth
+}
