@@ -1,0 +1,7 @@
+{
+  "name": "demo-PesoHarvest",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
